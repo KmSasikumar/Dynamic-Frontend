@@ -1,34 +1,38 @@
-name: Deploy API
+name: Deploy Next.js App to Heroku
 
 on:
   push:
     branches:
-      - main  # Triggers when pushing to the main branch
-  pull_request:
-    branches:
-      - main  # Triggers when a PR is created targeting the main branch
+      - main  # Adjust if your default branch is named differently
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest  # Specify which operating system to use for the actions
+    runs-on: ubuntu-latest
 
     steps:
-    - name: Check out repository
-      uses: actions/checkout@v2  # Checks out your repository to use in the workflow
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v2  # Sets up the Python environment for your app
-      with:
-        python-version: '3.8'  # You can specify your app's Python version (3.8 in this case)
+      - name: Set Up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.18.1'
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip  # Upgrade pip
-        pip install -r requirements.txt  # Install dependencies from the requirements.txt file
+      - name: Install Dependencies
+        run: npm install
 
-    - name: Deploy to Heroku
-      uses: akshnz/heroku-action@v1  # A GitHub action that helps you deploy to Heroku
-      with:
-        heroku_api_key: ${{ secrets.HEROKU_API_KEY }}  # Heroku API key (we'll set this in GitHub Secrets)
-        heroku_app_name: TradeMarkia Search # Replace with your Heroku app's name
-        heroku_email: Kommasasikumaryadav2022@vitbhopal.com  # Replace with your Heroku email
+      - name: Build Next.js Application
+        run: npm run build
+
+      - name: Install Heroku CLI
+        run: |
+          curl https://cli-assets.heroku.com/install.sh | sh
+
+      - name: Deploy to Heroku
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+          HEROKU_APP_NAME: trademarkia-search  # Replace with your Heroku app name
+          HEROKU_EMAIL:  kommasasikumaryadav2022@vitbhopal.ac.in  # Replace with your Heroku account email
+        run: |
+          heroku git:remote -a $HEROKU_APP_NAME
+          git push heroku HEAD:refs/heads/main --force

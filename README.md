@@ -70,7 +70,7 @@ This is a *Next.js* project with *TypeScript, designed for a structured frontend
 - Store all images inside the /public/images/ directory for better organization.
 - Use them in components/pages like this:
   tsx
-  <img src="/images/logo.png" alt="Logo" className="h-10" />
+  <img src="/public/logo.png" alt="Logo" className="h-10" />
   
 
 ## 🖼 Project Screenshots

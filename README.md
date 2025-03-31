@@ -4,18 +4,19 @@
 This is a *Next.js* project with *TypeScript, designed for a structured frontend development experience. It includes pages like **Home, About, Database, and Search*, and follows a modular component-based approach.
 
 ## 🏗 Project Structure
+
+```
 22BCE11638_Frontend/
-│   .gitattributes
-│   .gitignore
-│   eslint.config.mjs
-│   next.config.ts
-│   package-lock.json
-│   package.json
-│   postcss.config.mjs
-│   README.md
-│   tsconfig.json
-│
-├───public/
+├── .gitattributes
+├── .gitignore
+├── eslint.config.mjs
+├── next.config.ts
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── README.md
+├── tsconfig.json
+├── public/
 │   ├── images/              # Place static images here
 │   │   ├── file.svg
 │   │   ├── globe.svg
@@ -23,27 +24,28 @@ This is a *Next.js* project with *TypeScript, designed for a structured frontend
 │   │   ├── load.png
 │   │   ├── logo.png
 │   │   ├── trade-markia-image.png
-│   │   ├── window.svg
+│   │   └── window.svg
 │   ├── next.svg
-│   ├── vercel.svg
-│
-└───src/
-    ├───app/
+│   └── vercel.svg
+└── src/
+    ├── app/
     │   ├── favicon.ico
     │   ├── globals.css
     │   ├── layout.tsx
-    │   ├── page.tsx  # Home Page
-    │   ├───about/
-    │   │   ├── page.tsx  # About Page
-    │   ├───database/
-    │   │   ├── page.tsx  # Database Page
-    │   ├───search/
-    │   │   ├── page.tsx  # Search Page
-    │
-    ├───components/           # Place reusable components here
-    │   ├── Header.tsx
-    │   ├── Footer.tsx
-    │   ├── SearchBar.tsx
+    │   ├── page.tsx                # Home Page
+    │   ├── about/
+    │   │   └── page.tsx            # About Page
+    │   ├── database/
+    │   │   └── databasecontext.tsx    # Database Page
+    │   │   └── page.tsx 
+    │   └── search/
+    │       └── page.tsx 
+    └── components/                 # Reusable components
+        ├── Header.tsx
+        ├── Footer.tsx
+        └── SearchBar.tsx
+```
+
 
 
 ## 🛠 Setup Instructions
@@ -92,7 +94,7 @@ npm run build
 vercel
 
 ✅ Live Website
-👉 Visit the App
+👉 [Visit the App](https://22-bce-11638-frontend-609zr4amo-sasikumars-projects-5b833c79.vercel.app)
 
 ## 🔗 Useful Links
 - [Next.js Documentation](https://nextjs.org/docs)

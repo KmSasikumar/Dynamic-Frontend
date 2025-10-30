@@ -1,4 +1,4 @@
-# 22BCE11638_Frontend
+# Dynamic Frontend
 
 ## 📌 Project Overview
 This is a *Next.js* project with *TypeScript, designed for a structured frontend development experience. It includes pages like **Home, About, Database, and Search*, and follows a modular component-based approach.

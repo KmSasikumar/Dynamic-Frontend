@@ -21,7 +21,7 @@ A robust **Next.js** application engineered with **TypeScript** and **Tailwind C
 
 ## 📂 Project Structure
 ```bash
-22BCE11638_Frontend/
+Dynamic-Frontend/
 ├── public/                 # Static assets (images, icons)
 ├── src/
 │   ├── app/                # Next.js App Router
@@ -38,8 +38,8 @@ A robust **Next.js** application engineered with **TypeScript** and **Tailwind C
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-repo/22BCE11638_Frontend.git
-   cd 22BCE11638_Frontend
+   git clone https://github.com/your-repo/Dynamic-Frontend.git
+   cd Dynamic-Frontend
    ```
 
 2. **Install Dependencies:**

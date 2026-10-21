@@ -243,14 +243,9 @@ export default function DatabasePageContent() {
                     </button>
                 </div>
 
-                {/* Trademarkia Logo (Image and Text) */}
+                {/* App brand */}
                 <div className="absolute right-[20px] top-[25px] flex items-center">
-                    <img
-                        src="/trade-markia-image.png"
-                        alt="Trademarkia Logo"
-                        className="h-5 mr-2"
-                    />
-                    {/* <div className="text-blue-600 font-bold text-lg">Trademarkia</div> */}
+                    <div className="text-blue-600 font-bold text-lg">Trademark Search</div>
                 </div>
             </div>
 

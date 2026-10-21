@@ -1,3 +1,4 @@
+
 # Project Architecture & Design Overview
 
 This document provides a visual and structural breakdown of the Trademark Search Application.

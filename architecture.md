@@ -1,7 +1,6 @@
-
 # Project Architecture & Design Overview
 
-This document provides a visual and structural breakdown of the Trademarkia Search Application.
+This document provides a visual and structural breakdown of the Trademark Search Application.
 
 ## 1. System Architecture
 The application follows a modern usage of Next.js 15, leveraging Server Components and Client Components for optimal performance and interaction.
@@ -18,7 +17,7 @@ graph TD
     end
     
     subgraph "Data Layer"
-        ExtAPI[Trademarkia External API]
+        ExtAPI[Trademark Search API (external)]
         LocalDB[Local Mock DB]
     end
 

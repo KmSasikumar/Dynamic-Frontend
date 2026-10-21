@@ -127,7 +127,7 @@ function SearchResultsContent() {
           Search
         </button>
         <div className="absolute right-8">
-          <img src="/trade-markia-image.png" alt="Trademarkia Logo" className="h-6" />
+          <span className="text-blue-600 font-bold text-lg">Trademark Search</span>
         </div>
       </header>
 
